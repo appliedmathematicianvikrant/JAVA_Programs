@@ -3,10 +3,10 @@
  *** Date: 28 September 2023                                                   ****
  *** Objective: To check if all the chracters in a string are unique or not    ****
  ***                                                                           ****
+ ***                                                                           ****
  **********************************************************************************/
 
-
-
+ //Importing class for scanning data
 import java.util.Scanner;
 
 public class Unique_Chars{
