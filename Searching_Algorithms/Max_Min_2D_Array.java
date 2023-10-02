@@ -60,6 +60,4 @@ public class Max_Min_2D_Array {
         return max;
     }
 
-
-
 }
