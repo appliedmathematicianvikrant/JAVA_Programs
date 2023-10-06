@@ -44,23 +44,43 @@ public class Binary_Tree {
     }
 
     public void displayTree(){
-        displayNodes(root);
+        displayNodes(this.root, "");
     }
 
-    void displayNodes(Node node){
+    public void displayNodes(Node node, String indent){
             if(node == null){
                 return;
             }
-            System.out.println(node.data);
-            displayNodes(node.left);
-            displayNodes(node.right);
+            System.out.println(indent + node.data);
+            displayNodes(node.left, indent + "\t");
+            displayNodes(node.right ,indent + "\t");
+        }
+
+        public void goodDisplay(){
+            nicedisplay(root, 0);
+        }
+        public void nicedisplay(Node node, int level){
+            if(node == null){
+                return;
+            }
+            nicedisplay(node.right, level + 1);
+            if(level !=0){
+                for(int i = 0; i < level - 1; i++){
+                    System.out.print("|\t\t");
+                }
+                System.out.println("---------->"+ node.data);
+            }else{
+                System.out.println(node.data);
+            }
+            nicedisplay(node.left, level+1);
         }
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         Binary_Tree tree1 = new Binary_Tree();
         tree1.insertRoot();
-        tree1.displayTree();
+       // tree1.displayTree();
+        tree1.goodDisplay();
 
     }
 }
