@@ -16,7 +16,7 @@ public class CGPA {
         int mark5 = in.nextInt();
         int totalMarksObtained = mark1 + mark2 + mark3 + mark4 + mark5;
         int totalMarks = 500;
-        double percentage = ((totalMarksObtained / totalMarks) * 100);
+        double percentage = (totalMarksObtained / totalMarks) ;
         System.out.println(percentage);
         System.out.println("Hello");
         double CGPA = percentage / 9.5;
